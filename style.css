@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+em{
+    background-color: red;
+    border-radius: 50%;
+    padding: .1rem;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all .35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar{
+    width: 250px;
+    min-width: 250px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #0e223e;
+}
+
+.sidebar-logo{
+    padding: 1.5rem 1.7rem;
+}
+
+.sidebar-logo a{
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav{
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link{
+    padding: .625rem 1.625rem;
+    color: #fff;
+    display: block;
+    font-size: .9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link{
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover{
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item{
+    position: relative;
+}
+
+#sidebar .sidebar-link[data-bs-toggle="collapse"]::after{
+    border: solid;
+    border-width: 0 .1rem .1rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar .sidebar-link[data-bs-toggle="collapse"].collapsed::after{
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+
+.edit{
+    padding: 2rem;
+    box-shadow: 0 0 5px #a3bde3;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.edit h3{
+    margin-bottom: 3rem;
+}
+
+.input-group-text{
+    background-color: #a3bde3;
+    color: #0e223e;
+}
+
+.btn{
+    background-color: #0e223e;
+    border-color: #0e223e;
+}
+
+.btn:hover{
+    background-color: #a3bde3;
+}
